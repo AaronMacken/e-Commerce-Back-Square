@@ -118,7 +118,7 @@ exports.processPayment = async function (req, res) {
                     {
                         name: "Shipping fee",
                         amount_money: {
-                            amount: 550,
+                            amount: Number(550),
                             currency: "USD"
                         },
                         calculation_phase: 'TOTAL_PHASE'
