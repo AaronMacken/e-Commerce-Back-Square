@@ -160,6 +160,7 @@ exports.processPayment = async function (req, res) {
         } catch (error) {
             status = "failure";
             totalPrice = 0;
+            console.log('Bad reqeust error')
             console.log(error)
         }
         res.json({ error, status })
@@ -168,6 +169,7 @@ exports.processPayment = async function (req, res) {
         totalPrice = 0;
         let err = new Error("Invoice to database conflict.")
         console.log(err);
+        console.log('Items not found')
         res.json({ err, status })
     }
 
