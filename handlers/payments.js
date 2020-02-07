@@ -159,6 +159,7 @@ exports.processPayment = async function (req, res) {
         } catch (error) {
             status = "failure";
             totalPrice = 0;
+            console.log(error)
         }
         res.json({ error, status })
     } else {
