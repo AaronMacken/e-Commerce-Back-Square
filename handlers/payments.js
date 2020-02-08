@@ -129,7 +129,7 @@ exports.processPayment = async function (req, res) {
                 ]
             }
 
-            console.log(orderObject);
+            console.log(orderObject.amount_money);
 
 
 
