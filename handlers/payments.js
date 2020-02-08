@@ -44,6 +44,8 @@ exports.processPayment = async function (req, res) {
         totalPrice += 5.50
     }
 
+    console.log('total price: '+ totalPrice);
+
     if (sentProducts.length === foundProducts.length) {
         let error;
         let status;
