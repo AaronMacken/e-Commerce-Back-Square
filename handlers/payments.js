@@ -7,7 +7,7 @@ const squareConnect = require('square-connect');
 exports.processPayment = async function (req, res) {
     // initialize square
     // Set the Access Token
-    const accessToken = process.env.SAT;
+    const accessToken = "EAAAELl-3d-5h5LMQaKswNJ9sLa3nduDT1TDmJ_cSQpgevuaB58EJJJxoSA17Fgk"
     // Set Square Connect credentials and environment
     const defaultClient = squareConnect.ApiClient.instance;
     // Configure OAuth2 access token for authorization: oauth2
@@ -44,7 +44,6 @@ exports.processPayment = async function (req, res) {
         totalPrice += 5.50
     }
 
-    console.log(req.body);
     if (sentProducts.length === foundProducts.length) {
         let error;
         let status;
@@ -78,7 +77,7 @@ exports.processPayment = async function (req, res) {
             // variables used for the order process
             const idempotency_key_order = crypto.randomBytes(22).toString('hex');
             const idempotency_fulfill_order = crypto.randomBytes(22).toString('hex');
-            const locationId = process.env.LID;
+            const locationId = "BHXWX6S2G8A4F";
 
 
             // initialize necessary squareConnect API objects
