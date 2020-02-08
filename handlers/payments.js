@@ -44,6 +44,8 @@ exports.processPayment = async function (req, res) {
         totalPrice += 5.50
     }
 
+    totalPrice = totalPrice.toFixed(2);
+
     console.log('total price: '+ totalPrice);
 
     if (sentProducts.length === foundProducts.length) {
@@ -128,6 +130,7 @@ exports.processPayment = async function (req, res) {
                     }
                 ]
             }
+
 
             console.log(orderObject.amount_money);
 
