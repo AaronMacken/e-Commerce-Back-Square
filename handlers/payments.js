@@ -103,6 +103,8 @@ exports.processPayment = async function (req, res) {
                 return lineItem;
             });
 
+            console.log(orderObject.total_money)
+
             orderObject.fulfillments = [
                 {
                     uid: idempotency_fulfill_order,
