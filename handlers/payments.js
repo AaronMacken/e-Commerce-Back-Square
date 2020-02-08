@@ -159,8 +159,7 @@ exports.processPayment = async function (req, res) {
         } catch (error) {
             status = "failure";
             totalPrice = 0;
-            console.log('Bad reqeust error')
-            // console.log(error)
+            console.log(error)
         }
         res.json({ error, status })
     } else {
