@@ -103,7 +103,6 @@ exports.processPayment = async function (req, res) {
                 return lineItem;
             });
 
-            console.log(orderObject.total_money)
 
             orderObject.fulfillments = [
                 {
@@ -129,6 +128,8 @@ exports.processPayment = async function (req, res) {
                     }
                 ]
             }
+
+            console.log(orderObject);
 
 
 
@@ -163,7 +164,7 @@ exports.processPayment = async function (req, res) {
         } catch (error) {
             status = "failure";
             totalPrice = 0;
-            console.log(error)
+            // console.log(error)
         }
         res.json({ error, status })
     } else {
